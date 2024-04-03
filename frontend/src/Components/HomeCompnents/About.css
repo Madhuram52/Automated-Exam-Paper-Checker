@@ -1,0 +1,29 @@
+.about-container {
+    /* background-color: #87dbff; */
+    padding: 2vw;
+    margin: 5vw;
+    border: 10px solid #87dbff;
+    color: #000;
+    /* padding: 20px; */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-heading {
+    text-align: center;
+    font-size: 4vw;
+    color: #00b3ff;
+    margin: 2vh;
+}
+
+.about-description {
+    font-size: 1.5vw;
+    line-height: 1.6;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .about-description {
+        font-size:3vw;
+    }
+}

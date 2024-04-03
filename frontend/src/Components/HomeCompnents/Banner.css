@@ -1,0 +1,131 @@
+.item-container {
+    /* position: relative; */
+    /* width: 100%; */
+    /* margin-top: 80px; */
+    /* box-shadow: 0 0 20px #dbdbdb; */
+    /* border: 5px solid #4EB3E0; */
+    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.mainline {
+    font-size: 7vw; /* Change to vw unit for responsiveness */
+    font-weight: 900;
+    margin: 0 0 10% 0;
+    color: transparent;
+    -webkit-text-stroke: 2px #4EB3E0;
+    background: url(../../Assets/Img/back1.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+    /* width: 50%;  */
+    text-align: center;
+}
+
+.bgimage{
+    align-self:flex-end;
+    height:90vh;
+    caret-color: white;
+}
+
+.items {
+    position: absolute;
+    top:30%;
+    text-align: center;
+    width:50%;
+
+}
+
+/* Add any additional styles as needed */
+
+@keyframes back {
+    100% {
+        background-position: 2000px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .item-container{
+        border: none;
+    }
+    .items {
+        position: relative;
+        margin-top:20%;
+        width: 100%; /* Adjust width for smaller screens */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .mainline {
+        font-size: 6vw; /* Adjust font size for smaller screens */
+        font-weight: 900;
+        -webkit-text-stroke: 1px #4EB3E0;
+        width:50%;
+        
+    }
+    .bgimage {
+        display: none; /* Hide image on mobile screens */
+    }
+}
+
+
+.glow-on-hover{
+    width: 30%;
+    height: 50px; 
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0; 
+    border-radius: 10px;
+}
+
+.glow-on-hover:before{
+    content:'';
+    background: linear-gradient(45deg, #00b7ff, #00b7ff5c, #00b7ff89, #00b7ffa8, #00b7ffde);
+    position: absolute;
+    top: -2px; 
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    Filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 1; 
+    transition: opacity .3s ease-in-out; 
+    border-radius: 10px;
+}
+
+.glow-on-hover:hover{
+    color:#000;
+}
+
+.glow-on-hover:hover:after{ 
+    background: transparent;
+}
+
+
+.glow-on-hover:after{
+    z-index: -1;
+    content:"";
+    position: absolute;
+    width:100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0; 
+    border-radius: 10px;
+}
+
+@keyframes glowing{
+    0%{background-position: 0 0;}
+    50%{background-position: 400% 0;} 
+    100%{background-position: 0 0;}
+}
+    

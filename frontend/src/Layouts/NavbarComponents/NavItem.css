@@ -1,0 +1,16 @@
+li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-link{
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.nav-link:hover{
+    color: #0040ff;
+    text-decoration: underline;
+}
