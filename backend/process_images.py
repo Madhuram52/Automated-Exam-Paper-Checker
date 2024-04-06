@@ -7,7 +7,7 @@ current_directory = os.path.dirname(os.path.abspath(__file__))
 file_name = os.path.join(current_directory, 'corded-pivot-403608-8bbffa01aba8.json')
 
 # Set the path to your Google Cloud service account key JSON file
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = file_name
+os.environ["GOOGLE_APP_CREDENTIALS"] = file_name
 
 def extract_text_from_image(image_file):
     # Initialize the Vision API client
